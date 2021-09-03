@@ -1,0 +1,21 @@
+
+1) Parse from main and pass arrays -- if parsing fen becomes to slow .. pass board, turn etc. as arguments in constructor
+2) avoid strings all together, represent as integer -- in board too
+3) consider making a Move class -- just to try if slow ; and to store castling info, enpassant info...
+
+// dont use indexOf if possible .. either maintain states for pieces .. or just looping through is faster
+// consider making separate MoveGenerator class and use only one instance of it
+// maintain the index of each pieces so looping should not be done for each piece to find index
+
+// for calculating check positions , instead of calculating each attack for opponent, test the move for each pieces from king's position
+and check if there is the same opponent piece on destination square
+
+// maintain list of pinned pieces -- maybe
+
+
+// kingIndex becomes -1 if no king and it still generates moves -- check
+
+// getPseudoLegalMoves() and pass attackedPositions from outside instead of calculating inside constructor
+// loop once - maintain index of all pieces and use those index while generating moves or any other task
+
+// validate from outside .. send new moved board array as parameter, it calculates king's check by method mentioned above
